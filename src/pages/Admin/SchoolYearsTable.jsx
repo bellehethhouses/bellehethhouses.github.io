@@ -238,7 +238,6 @@ function SchoolYearsTable(props) {
             editable={{
               onRowUpdate: (newData, oldData) =>
                 new Promise((resolve, reject) => {
-                  console.log("put", newData);
                   props
                     .updateSchoolYear(newData)
                     .then(() => {

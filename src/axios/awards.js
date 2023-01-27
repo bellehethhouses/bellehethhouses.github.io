@@ -11,5 +11,5 @@ export const getAllAwards = () => {
       "Access-Control-Allow-Origin": "*",
     },
     withCredentials: false,
-  }).then((response) => console.log(response));
+  }).then((response) => {});
 };

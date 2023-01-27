@@ -6,8 +6,6 @@ export const awardPoints = (dispatch, award) => {
 
   let url = appConstants.baseUrl + "award";
 
-  console.log("award", award);
-
   return axios.post(url, award, {
     method: "POST",
     // mode: "no-cors",
@@ -31,18 +29,12 @@ export const createHouse = (house) => {
     },
     withCredentials: false,
   })
-    .then((response) => {
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+    .then((response) => {})
+    .catch(function (error) {});
 };
 
 export const getActiveSchoolyear = (dispatch) => {
   let url = appConstants.baseUrl + "schoolyear";
-
-  console.log("active shcool year not promise");
 
   axios(url, {
     method: "GET",
@@ -58,14 +50,10 @@ export const getActiveSchoolyear = (dispatch) => {
         payload: response.data,
       });
     })
-    .catch(function (error) {
-      console.log(error);
-    });
+    .catch(function (error) {});
 };
 export const getActiveSchoolyearPromise = (dispatch) => {
   let url = appConstants.baseUrl + "schoolyear";
-
-  console.log("active shcool year promise");
 
   return axios(url, {
     method: "GET",
@@ -206,7 +194,6 @@ export const deleteAward = (dispatch, id) => {
       withCredentials: false,
     })
     .then((response) => {
-      console.log("Delete");
       dispatch({
         type: appConstants.UPDATE_AWARDS_DELETED,
         payload: id,
@@ -226,9 +213,7 @@ export const getPoints = (dispatch) => {
         payload: response.data,
       });
     })
-    .catch(function (error) {
-      console.log(error);
-    });
+    .catch(function (error) {});
 };
 
 export const getPointsPromise = (dispatch) => {
@@ -289,9 +274,7 @@ export const getEvents = (dispatch) => {
         success: events ? true : false,
       });
     })
-    .catch((error) => {
-      console.log(error);
-    });
+    .catch((error) => {});
 };
 
 export const getIdByName = (name, schoolData) => {
@@ -313,9 +296,7 @@ export const getRecentAwards = (dispatch) => {
         payload: response.data,
       });
     })
-    .catch(function (error) {
-      console.log(error);
-    });
+    .catch(function (error) {});
 };
 
 export const getRecentAwardsPromise = (dispatch) => {
@@ -341,7 +322,6 @@ export const getSchoolYearNames = (dispatch) => {
 
 export const reset = (dispatch, schoolYear) => {
   let url = appConstants.baseUrl + `schoolyear`;
-  console.log("in reset", schoolYear);
 
   return axios.post(url, schoolYear, {
     method: "POST",

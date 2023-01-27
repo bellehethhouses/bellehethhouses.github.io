@@ -29,7 +29,6 @@ const GoogleLoginButton = (props) => {
 
   const handleLoginSuccess = (response) => {
     setEmail(response.profileObj.email);
-    console.log("response", response);
     props
       .validateJWT({ email: response.profileObj.email })
       .then((innerResponse) => {

@@ -19,8 +19,6 @@ export const House = (props) => {
   const legend = { show: false };
   const series = props.scores.length > 0 ? props.scores : [];
 
-  console.log(props.labels, props.scores);
-
   return (
     <Grid item xs={12} sm={6} md={3} className="House-item">
       <img src={props.logo} className="House-image" />

@@ -147,7 +147,6 @@ function UsersTable(props) {
           editable={{
             onRowUpdate: (newData, oldData) =>
               new Promise((resolve, reject) => {
-                console.log("put", newData);
                 props
                   .updateUser(newData)
                   .then((response) => {

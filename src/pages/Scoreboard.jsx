@@ -60,13 +60,7 @@ export const Scoreboard = (props) => {
   }, [activeSchoolYear]);
 
   const refresh = () => {
-    console.log(
-      "tried refresh",
-      activeSchoolYear,
-      selectedSchoolYearIdRef.current
-    );
     if (activeSchoolYear.SK === selectedSchoolYearIdRef.current) {
-      console.log("refreshed");
       loadPoints(selectedSchoolYearIdRef.current);
       loadActivity();
     }
@@ -153,8 +147,6 @@ export const Scoreboard = (props) => {
     setSelectedSchoolYearId(event.target.value);
     loadPoints(event.target.value);
   };
-
-  console.log("activity", activity);
 
   return (
     // <div>
