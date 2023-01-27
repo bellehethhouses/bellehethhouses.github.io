@@ -65,10 +65,10 @@ export const Scoreboard = (props) => {
       activeSchoolYear,
       selectedSchoolYearIdRef.current
     );
-    if (activeSchoolYear.id === selectedSchoolYearIdRef.current) {
+    if (activeSchoolYear.SK === selectedSchoolYearIdRef.current) {
       console.log("refreshed");
-      // loadPoints();
-      // loadActivity();
+      loadPoints(selectedSchoolYearIdRef.current);
+      loadActivity();
     }
   };
 
