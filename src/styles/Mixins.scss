@@ -1,0 +1,29 @@
+$breakpoints: (
+  "sm": 767px,
+  "md": 992px,
+  "lg": 1200px,
+) !default;
+
+$primary: #3f51b5;
+$font-size-mobile: 22px;
+$margin-standard: 16px;
+
+@mixin bpgte($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin bplte($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}

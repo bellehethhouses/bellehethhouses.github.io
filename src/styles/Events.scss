@@ -1,0 +1,50 @@
+@import "Mixins.scss";
+
+.Events {
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: $margin-standard;
+
+    @include bplte("sm") {
+      flex-direction: column;
+    }
+
+    h1 {
+      flex-basis: 50%;
+    }
+  }
+
+  &-add {
+    @include bplte("sm") {
+      order: -1;
+    }
+  }
+
+  &-hide {
+    display: none;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-around;
+
+    @include bplte("lg") {
+      flex-direction: column;
+    }
+  }
+
+  &-calendar {
+    flex-basis: 65%;
+  }
+
+  &-upcoming {
+    flex-basis: 30%;
+    margin-right: 32px;
+
+    @include bplte("sm") {
+      order: -1;
+    }
+  }
+}

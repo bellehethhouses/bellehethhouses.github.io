@@ -1,0 +1,69 @@
+@import "Mixins";
+
+.Banner {
+  &-desktop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+
+    @include bplte("sm") {
+      display: none;
+    }
+  }
+
+  &-mobile {
+    display: none;
+    width: 100%;
+
+    @include bplte("sm") {
+      display: flex;
+    }
+  }
+
+  &-tabs {
+    &--content {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    &--authentication {
+      display: flex;
+      justify-content: flex-end;
+      flex-basis: 100%;
+      padding: 16px;
+    }
+  }
+
+  &-hideTab {
+    display: none;
+  }
+
+  &-linkWrapper {
+    text-decoration: none;
+    padding: 0 16px;
+  }
+
+  &-link {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+
+    @include bplte("sm") {
+      color: $primary;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-authLink {
+    color: white;
+  }
+
+  &-menuToggle {
+    color: white;
+    padding: 0;
+  }
+}

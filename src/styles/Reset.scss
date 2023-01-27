@@ -1,0 +1,24 @@
+@import "Mixins.scss";
+
+.Reset {
+  margin-top: $margin-standard;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    width: 50%;
+
+    @include bpgte("md") {
+      width: 30%;
+    }
+  }
+
+  &-formItem {
+    margin: 16px 0 !important;
+  }
+}

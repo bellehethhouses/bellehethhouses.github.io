@@ -1,0 +1,53 @@
+@import "Mixins.scss";
+
+.Scoreboard {
+  &-carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-legend {
+    @include bplte("sm") {
+      display: none;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-first {
+    margin: $margin-standard;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: dodgerblue;
+    border-radius: 50%;
+  }
+
+  &-second {
+    margin: $margin-standard;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: mediumspringgreen;
+    border-radius: 50%;
+  }
+
+  &-third {
+    margin: $margin-standard;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: orange;
+    border-radius: 50%;
+  }
+}

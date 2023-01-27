@@ -1,0 +1,23 @@
+@import "Mixins.scss";
+
+.Event {
+  width: 100%;
+  margin: $margin-standard;
+  box-shadow: 3px 3px 3px #a1a1a1;
+
+  &-wrapper {
+    padding: 0 $margin-standard $margin-standard;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-moreInfo {
+    align-self: flex-end;
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

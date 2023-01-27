@@ -1,0 +1,36 @@
+@import "Mixins";
+
+.House {
+  &-image {
+    height: auto;
+    max-width: 300px;
+
+    @include bplte("sm") {
+      max-width: 80px;
+    }
+  }
+
+  &-name {
+    @include bplte("sm") {
+      font-size: $font-size-mobile;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include bplte("sm") {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 $margin-standard !important;
+    }
+  }
+
+  &-pieChart {
+    @include bplte("sm") {
+      display: none;
+    }
+  }
+}

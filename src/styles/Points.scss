@@ -1,0 +1,28 @@
+@import "Mixins.scss";
+
+.Points {
+  margin-top: $margin-standard;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    width: 80%;
+
+    @include bpgte("md") {
+      width: 60%;
+    }
+  }
+
+  &-formItem {
+    margin: 16px 0 !important;
+  }
+
+  p {
+    color: #ee2a2a;
+  }
+}

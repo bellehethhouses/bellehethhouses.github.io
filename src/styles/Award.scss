@@ -1,0 +1,37 @@
+@import "Mixins.scss";
+
+.Award {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-wrapper {
+      width: 35%;
+      margin: $margin-standard;
+      box-shadow: 3px 3px 3px #a1a1a1;
+      border: 2px solid black;
+      // padding: 4 $margin-standard $margin-standard;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include bplte("sm") {
+        width: 90%;
+      }
+      @include bplte("md") {
+        width: 75%;
+      }
+    }
+
+    &-type {
+      @include bplte("sm") {
+        font-size: 10px;
+      }
+    }
+
+    &-housePic {
+      max-width: 150px;
+
+      @include bplte("sm") {
+        max-width: 80px;
+      }
+    }
+  }

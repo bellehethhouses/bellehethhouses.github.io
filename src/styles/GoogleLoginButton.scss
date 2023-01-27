@@ -1,0 +1,12 @@
+@import "Mixins.scss";
+
+.Google {
+  &-userInfo {
+    display: flex;
+    align-items: center;
+
+    @include bplte("md") {
+      display: none;
+    }
+  }
+}
