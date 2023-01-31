@@ -103,7 +103,7 @@ function SchoolYearsTable(props) {
           reset();
           setOpen(false);
           handleSetAlert(
-            `Successfully started new school year: ${data.name}`,
+            `Successfully started new school year: ${data.schoolyear_name}`,
             "success"
           );
         });
@@ -242,7 +242,7 @@ function SchoolYearsTable(props) {
                     .updateSchoolYear(newData)
                     .then(() => {
                       handleSetAlert(
-                        `ouccessfully renamed school year ${newData.schoolyear_name}`
+                        `Successfully renamed school year ${newData.schoolyear_name}`
                       );
                     })
                     .catch((error) => {
